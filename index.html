@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>footage-calculator</title>
+    <meta charset="UTF-8"/>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="Facharbeit.css">
+</head>
+
+<body>
+
+  <h1>Taschenrechner</h1>
+
+  <form id="speicherplatzrechner"></form>
+  <table style="width:50">
+    <tr>
+      <td>Höhe</td>
+      <td>
+        <input id="width" type="number" name="Breite" placeholder="in pixel" min="0" step="10" />
+      </td>
+    </tr>
+      
+    <tr>
+      <td>Breite</td>
+      <td>
+        <input id="height" type="number" name="Höhe" placeholder="in pixel" min="0" step="10" />
+      </td>
+    </tr>
+
+    
+    <tr>
+      <td>Frame-Rate</td>
+        <td><input id="frame" type="number" name="Frame" placeholder="Bilder pro s" min="0" />
+      </td>
+    </tr>
+   
+    <tr>
+      <td>Datentiefe</td>
+      <td>
+      <input id="datadepth" type="number" name="Datentiefe" placeholder="in bit" min="0" />
+      </td>
+    </tr>
+
+    <tr>
+      <td>Zeit</td>
+      <td>
+        <input id="time" type="number" name="Zeit" placeholder="in s" min="0" step="1"/>
+      </td>
+    </tr>
+
+    <tr>
+    <td><button id="calc-button" onclick="calc()">click</button></td>
+    </tr>
+
+    <tr>
+      <td>
+      <p id="result"></p>
+      </td>
+    </tr>
+  </table>
+
+
+  <button onclick="letitgetdark()">Try it</button>
+    <div id=".darkmode">
+     This is a DIV element.
+    </div>
+    <div id="wrapper">
+
+
+
+
+
+
+
+
+  </body>
+
+
+<footer>
+ (c) Levin Staudte
+</footer>
+</html>
