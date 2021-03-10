@@ -7,12 +7,11 @@ body {
   color: black;
   max-width: 1024px;
   margin: 0 auto;
+  border: width 20px;
+  border-style: solid;
+  border-color:black; 
 }
-            
-  #dark-mode {
-    background-color: black;
-    color: white;
-  }
+
 
 h1{
     text-align: center;
@@ -21,12 +20,13 @@ h1{
     text-shadow: 0 0 0.2em #a3a3a3;
 }
 
-#calcbutton {
-    font-size: 40px;
+#calc-button {
+    font-size: 20px;
     color: #961e1a;
 }
 
 #h1 {
+  margin-top:     1em;
   color:#961e1a;
 }
 
@@ -35,4 +35,72 @@ h1{
  min-width:320px;
  margin:0 auto;
  background:rgb(197, 138, 138);
+}
+
+#speicherplatzrechner{
+  margin-top:    20px;
+  margin-bottom: 80px;
+}
+
+
+
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;  
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }

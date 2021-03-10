@@ -9,5 +9,4 @@ function calc() {
 
     document.getElementById("result").textContent = result.toPrecision(4);
   }
-
-  //git test
+  
