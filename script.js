@@ -9,4 +9,9 @@ function calc() {
 
     document.getElementById("result").textContent = result.toPrecision(4);
   }
-  
+
+
+  function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+  }

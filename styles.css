@@ -12,11 +12,16 @@ body {
   border-color:black; 
 }
 
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
 
 h1{
     text-align: center;
-    padding-left: 5%;
-    color: #961e1a;
+    padding-left: center;
+    color: #961e1a; 
     text-shadow: 0 0 0.2em #a3a3a3;
 }
 
@@ -25,11 +30,8 @@ h1{
     color: #961e1a;
 }
 
-#h1 {
-  margin-top:     1em;
-  color:#961e1a;
-}
 
+/*
 #wrapper {
  max-width:1024px;
  min-width:320px;
@@ -37,13 +39,13 @@ h1{
  background:rgb(197, 138, 138);
 }
 
+
 #speicherplatzrechner{
   margin-top:    20px;
   margin-bottom: 80px;
 }
 
-
-
+*/
 
 .navbar {
   overflow: hidden;
