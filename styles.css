@@ -11,11 +11,6 @@ body {
   border-color:black; 
 }
 
-header{
-
-  background-color: aqua;
-}
-
 .dark-mode {
   background-color: rgb(36, 36, 36);
   font-family: Verdana, Tahoma, Arial, sans-serif;
@@ -70,7 +65,7 @@ h1 {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-}
+  }
 
 .dropdown {
   float: left;
@@ -85,11 +80,12 @@ h1 {
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
-  margin: 0;  
+  margin: 0; 
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: red;
+  transition: 0.3s;
 }
 
 .dropdown-content {
@@ -112,8 +108,11 @@ h1 {
 
 .dropdown-content a:hover {
   background-color: #ddd;
-}
+  }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+
+iframe

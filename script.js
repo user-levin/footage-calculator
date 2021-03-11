@@ -1,3 +1,4 @@
+//calc
 function calc() {
     let width = parseInt(document.getElementById("width").value);
     let height = parseInt(document.getElementById("height").value);
@@ -17,8 +18,6 @@ function calc() {
   }
 
 
-//
-var d = new Date();
+//for copyright
 var jahr = d.getFullYear();
- 
 var copyright = "&copy;" + " Levin Staudte" + " " + jahr;
