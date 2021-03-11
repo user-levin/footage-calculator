@@ -11,7 +11,14 @@ function calc() {
   }
 
 
-  function myFunction() {
+  function goingtothedarkside() {
     var element = document.body;
     element.classList.toggle("dark-mode");
   }
+
+
+//
+var d = new Date();
+var jahr = d.getFullYear();
+ 
+var copyright = "&copy;" + " Levin Staudte" + " " + jahr;
