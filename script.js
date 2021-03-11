@@ -19,5 +19,6 @@ function calc() {
 
 
 //for copyright
-var jahr = d.getFullYear();
-var copyright = "&copy;" + " Levin Staudte" + " " + jahr;
+var today = new Date();
+var year = today.getFullYear();
+var copyright = "&copy;" + " Levin Staudte" + " " + year; 
