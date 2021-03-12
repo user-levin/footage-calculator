@@ -35,13 +35,12 @@ h1 {
     text-shadow: 0 0 0.2em #a3a3a3;
     padding: 2% 0% 2% 0% ;
     background-color: #caf02057;
-  }
+}
 
 #calc-button {
     font-size: 20px;
     color: #961e1a;
 }
-
 
 /*
 #wrapper {
@@ -69,7 +68,7 @@ h1 {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  }
+}
 
 .dropdown {
   float: left;
