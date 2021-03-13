@@ -23,6 +23,18 @@ function calctime() {
   document.getElementById("resulttime").textContent = Math.round(resulttime);
 }
 
+function calcpic() {
+  let widthtpic = parseInt(document.getElementById("widthtpic").value);
+  let heightpic = parseInt(document.getElementById("heightpic").value);
+  let datadepthpic = parseInt(document.getElementById("datadepthpic").value);
+
+  let resultpic = (widthtpic * heightpic * datadepthpic) / (8 * Math.pow(1024, 2));
+
+  document.getElementById("resultpic").textContent = Math.round(resultpic);
+}
+
+
+
 function goingtothedarkside() {
   var element = document.body;
   element.classList.toggle("dark-mode");
