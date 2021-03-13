@@ -12,7 +12,6 @@
   <h1>footage-calculator</h1>
 </header>
 
-
 <body>
   <nav>
   </div>
@@ -41,66 +40,66 @@
   </div>
   </nav>
 
-
   <main>
-      <form id="speicherplatzrechner"></form>
-    <table style="width:50">
-    <tr>
-      <td>Höhe</td>
-      <td>
-        <input id="width" type="number" name="Breite" placeholder="in pixel" min="0" step="10" />
-      </td>
-    </tr>
-      
-    <tr>
-      <td>Breite</td>
-      <td>
-        <input id="height" type="number" name="Höhe" placeholder="in pixel" min="0" step="10" />
-      </td>
-    </tr>
+    <form id="speicherplatzrechner"></form>
+      <table style="width:50">
+      <tr>
+        <td>Höhe</td>
+        <td>
+          <input id="widthspace" type="number" name="Breite" placeholder="in pixel" min="0" step="10" />
+        </td>
+      </tr>
+
+      <tr>
+        <td>Breite</td>
+        <td>
+          <input id="heightspace" type="number" name="Höhe" placeholder="in pixel" min="0" step="10" />
+        </td>
+      </tr>
+
+      <tr>
+        <td>Frame-Rate</td>
+          <td><input id="framespace" type="number" name="Frame" placeholder="Bilder pro s" min="0" />
+        </td>
+      </tr>
     
-    <tr>
-      <td>Frame-Rate</td>
-        <td><input id="frame" type="number" name="Frame" placeholder="Bilder pro s" min="0" />
-      </td>
-    </tr>
-   
-    <tr>
-      <td>Datentiefe</td>
-      <td>
-      <input id="datadepth" type="number" name="Datentiefe" placeholder="in bit" min="0" />
-      </td>
-    </tr>
+      <tr>
+        <td>Datentiefe</td>
+        <td>
+        <input id="datadepthspace" type="number" name="Datentiefe" placeholder="in bit" min="0" />
+        </td>
+      </tr>
 
-    <tr>
-      <td>Zeit</td>
-      <td>
-        <input id="time" type="number" name="Zeit" placeholder="in s" min="0" step="1"/>
-      </td>
-    </tr>
+      <tr>
+        <td>Zeit</td>
+        <td>
+          <input id="timespace" type="number" name="Zeit" placeholder="in s" min="0" step="1"/>
+        </td>
+      </tr>
 
-    <tr>
-    <td><button id="calc-button" onclick="calc()">Berechnen</button></td>
-    </tr>
+      <tr>  
+      <td><button id="calc-button" onclick="calcspace()">Berechnen</button></td>
+      </tr>
 
-    <tr>
-      <td>
-        <p id="result"></p>
-      </td>
-    </tr>
-    </table>
+      <tr>
+        <td>
+
+          <output id="resultspace"> in MB</output>
+          <p id="resultspace"></p> <p></p> 
+        </td>
+      </tr>
+      </table>
 
     
-    <button onclick="goingtothedarkside()" id="darkmode-button">Click mich!</button>
-  </main>
+    </main>
     
-</body>
-
-<footer>
+  </body>
+  
+  <footer>
+  <button onclick="goingtothedarkside()" id="darkmode-button">Click mich!</button>
   <script type="text/javascript">
     document.write(copyright);  
   </script>
 </footer>
-
 
 </html>

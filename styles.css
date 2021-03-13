@@ -25,6 +25,9 @@ body {
 }
 
 main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /*margin margin-left: 1cm;*/
 }
 
@@ -115,4 +118,51 @@ h1 {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+
+
+//copy
+@media screen and (max-width: 478px){
+  body{
+      font-size: 0.6em;
+  }
+}
+@media screen and (max-width: 740px){
+  #banner{
+      display:none;
+  }
+  nav {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+  nav ul{
+      list-style:none;
+      margin: 0 auto;
+      padding-left: 0px;
+  }
+  nav ul li{
+      font-size: 2.0em;
+      text-align: center;
+      margin-left: 0;
+      width: 100%;
+      border-top: 1px solid #878EEE;
+      border-right: 0px solid #878EEE;
+      border-bottom: 1px solid #878EEE;
+      border-left: 0px solid #878EEE;
+  }
+  nav ul li a {
+      padding: 8px 0;
+  }
+  .bereich-links{
+      width: 100%;
+  }
+  .bereich-rechts{
+      width: 100%;
+  }
+  .bereich{
+      float: left;
+      margin:0;
+      width: 100%;
+  }
 }

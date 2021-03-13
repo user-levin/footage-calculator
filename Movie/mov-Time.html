@@ -40,7 +40,52 @@
   </div>
 </nav>
 
+
+
     <main>
+        <form id="speicherplatzrechner"></form>
+        <table style="width:50">
+        <tr>
+          <td>Höhe</td>
+          <td>
+            <input id="widthtime" type="number" name="Breite" placeholder="in pixel" min="0" step="10" />
+          </td>
+        </tr>
+        <tr>
+          <td>Breite</td>
+          <td>
+            <input id="heighttime" type="number" name="Höhe" placeholder="in pixel" min="0" step="10" />
+          </td>
+        </tr>
+        <tr>
+          <td>Frame-Rate</td>
+            <td><input id="frametime" type="number" name="Frame" placeholder="Bilder pro s" min="0" />
+          </td>
+        </tr>
+        <tr>
+          <td>Datentiefe</td>
+          <td>
+          <input id="datadepthtime" type="number" name="Datentiefe" placeholder="in bit" min="0" />
+          </td>
+        </tr>
+        <tr>
+          <td>freier Speicherplatz</td>
+          <td>
+            <input id="spacetime" type="number" name="Zeit" placeholder="in s" min="0" step="1"/>
+          </td>
+        </tr>
+        <tr>  
+        <td><button id="calc-buttontime" onclick="calctime()">Berechnen</button></td>
+        </tr>
+        <tr>
+          <td>
+            <p id="resulttime"> s</p>
+          </td>
+        </tr>
+        </table>
+
+
+
 
         <button onclick="goingtothedarkside()" id="darkmode-button">Click mich!</button>
 
