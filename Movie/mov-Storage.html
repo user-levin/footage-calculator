@@ -3,9 +3,10 @@
 
 <head>
   <title>footage-calculator</title>
-    <meta charset="UTF-8"/>
-    <script type="text/javascript" src="../script.js"></script>
-    <link rel="stylesheet" href="../styles.css">
+  <meta charset="UTF-8" />
+  <script type="text/javascript" src="../script.js"></script>
+  <link rel="stylesheet" href="../styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0; user-scalable=no">
 </head>
 
 <header>
@@ -14,35 +15,35 @@
 
 <body>
   <nav>
-  </div>
+    </div>
     <div class="navbar">
-    <a href="../index.html">Home</a>
-    <div class="dropdown">
-      <button class="dropbtn">Video 
-        <i class="fa fa-caret-down"></i>
-      </button>    
-      <div class="dropdown-content">
-        <a href="./mov-Storage.html">Speicherplatz</a>
-        <a href="./mov-Time.html">Zeit</a>
+      <a href="../index.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Video
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="./mov-Storage.html">Speicherplatz</a>
+          <a href="./mov-Time.html">Zeit</a>
+        </div>
       </div>
-    </div>
-  
-    <div class="dropdown">
-      <button class="dropbtn">Bilder 
-        <i class="fa fa-caret-down"></i>
-      </button>    
-      <div class="dropdown-content">
-        <a href="../Images/pic-space.html">Speicherplatz</a>
+
+      <div class="dropdown">
+        <button class="dropbtn">Bilder
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="../Images/pic-space.html">Speicherplatz</a>
+        </div>
       </div>
+
+
     </div>
-  
-  
-  </div>
   </nav>
 
   <main>
     <form id="speicherplatzrechner"></form>
-      <table style="width:50">
+    <table style="width:50">
       <tr>
         <td>Höhe</td>
         <td>
@@ -59,45 +60,46 @@
 
       <tr>
         <td>Frame-Rate</td>
-          <td><input id="framespace" type="number" name="Frame" placeholder="Bilder pro s" min="0" />
+        <td><input id="framespace" type="number" name="Frame" placeholder="Bilder pro s" min="0" />
         </td>
       </tr>
-    
+
       <tr>
         <td>Datentiefe</td>
         <td>
-        <input id="datadepthspace" type="number" name="Datentiefe" placeholder="in bit" min="0" />
+          <input id="datadepthspace" type="number" name="Datentiefe" placeholder="in bit" min="0" />
         </td>
       </tr>
 
       <tr>
         <td>Zeit</td>
         <td>
-          <input id="timespace" type="number" name="Zeit" placeholder="in s" min="0" step="1"/>
+          <input id="timespace" type="number" name="Zeit" placeholder="in s" min="0" step="1" />
         </td>
       </tr>
 
-      <tr>  
-      <td><button id="calc-button" onclick="calcspace()">Berechnen</button></td>
+      <tr>
+        <td><button id="calc-button" onclick="calcspace()">Berechnen</button></td>
       </tr>
 
       <tr>
         <td>
 
           <output id="resultspace"> in MB</output>
-          <p id="resultspace"></p> <p></p> 
+          <p id="resultspace"></p>
+          <p></p>
         </td>
       </tr>
-      </table>
+    </table>
 
-    </main>
-    
-  </body>
-  
-  <footer>
+  </main>
+
+</body>
+
+<footer>
   <button onclick="goingtothedarkside()" id="darkmode-button">Click mich!</button>
   <script type="text/javascript">
-    document.write(copyright);  
+    document.write(copyright);
   </script>
 </footer>
 
