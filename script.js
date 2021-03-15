@@ -25,7 +25,7 @@ function calctime() {
   let resulttime = (8 * Math.pow(1024, 2) * spacetime) / (widthtime * heighttime * datadepthtime * frametime);
   let resulttimegb = (resulttime / 1000);
   document.getElementById("resulttime").textContent = Math.round(resulttime);
-  document.getElementById("resulttimegb" + " in s").textContent = Math.round(resulttimegb);
+  document.getElementById("resulttimegb").textContent;
 }
 
 //calculator time for Images

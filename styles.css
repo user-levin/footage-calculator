@@ -1,14 +1,15 @@
 body {
-  background-color: #d8d8d8;
+  background-color: #aaaaaa;
   color: black;
   font-family: Verdana, Tahoma, Arial, sans-serif;
   font-size: 0.8em;
   overflow: auto;
   max-width: 1024px;
   margin: 0 auto;
-  border: width 20px;
+  border: medium;
   border-style: solid;
   border-color: black;
+  /*padding-top: 1%;*/
 }
 
 .dark-mode {
@@ -24,6 +25,11 @@ body {
   border-color: black;
 }
 
+header {
+  size: 40%;
+  background-color: gold;
+}
+
 main {
   display: flex;
   justify-content: center;
@@ -37,7 +43,6 @@ h1 {
   color: #961e1a;
   text-shadow: 0 0 0.2em #a3a3a3;
   padding: 2% 0% 2% 0%;
-  background-color: #caf02057;
 }
 
 button {
@@ -45,6 +50,21 @@ button {
   color: #a3a3a3;
   width: auto 20%;
   font-size: 20px;
+}
+
+.hinweiss{
+  color: #961e1a;
+  background-color: slategrey;
+  border-color: sandybrown;
+  border-width: 5px;
+  border-style:double;
+  text-align: left;
+}
+
+.darkmode {
+  width: auto 50%;
+  color: green;
+  size: 3cm;
 }
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
@@ -59,7 +79,12 @@ button {
   }
   body {
     font-size: 1em;
-    background-color: aquamarine;
+    border-style: none;
+  }
+  footer {
+    position: absolute;
+    bottom: 2%;
+    padding-left: 5%;
   }
 }
 
@@ -85,6 +110,7 @@ button {
   margin-bottom: 80px;
 }
 
+/*navigationsmenü*/
 .navbar {
   overflow: hidden;
   background-color: #333;
@@ -145,49 +171,4 @@ button {
 
 .dropdown:hover .dropdown-content {
   display: block;
-}
-
-//copy
-@media screen and (max-width: 478px) {
-  body {
-    font-size: 0.6em;
-  }
-}
-@media screen and (max-width: 740px) {
-  #banner {
-    display: none;
-  }
-  nav {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  nav ul {
-    list-style: none;
-    margin: 0 auto;
-    padding-left: 0px;
-  }
-  nav ul li {
-    font-size: 2em;
-    text-align: center;
-    margin-left: 0;
-    width: 100%;
-    border-top: 1px solid #878eee;
-    border-right: 0px solid #878eee;
-    border-bottom: 1px solid #878eee;
-    border-left: 0px solid #878eee;
-  }
-  nav ul li a {
-    padding: 8px 0;
-  }
-  .bereich-links {
-    width: 100%;
-  }
-  .bereich-rechts {
-    width: 100%;
-  }
-  .bereich {
-    float: left;
-    margin: 0;
-    width: 100%;
-  }
 }
