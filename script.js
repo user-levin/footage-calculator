@@ -39,8 +39,11 @@ function calcpic() {
 
   document.getElementById("resultpic").textContent = Math.round(resultpic);
   document.getElementById("resultpic").textContent = Math.round(resultpicbg);
-
 }
+
+
+//var resultpic= parseInt(resultpic) + parseInt(mb);
+
 
 //for si units
 var gb = "in gb";
