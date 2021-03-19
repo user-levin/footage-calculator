@@ -10,7 +10,6 @@ body {
   border-style: solid;
   border-color: black;
   /*padding-top: 1%;*/
-  
 }
 
 .dark-mode {
@@ -32,11 +31,13 @@ header {
 }
 
 main {
-  padding-top: 5%; 
-  display: flex;
+  padding-top: 5%;
+  display: grid;
   justify-content: center;
   align-items: center;
   padding-bottom: 30%;
+  hyphens: auto; 
+	text-align: justify
 }
 
 h1 {
@@ -54,12 +55,17 @@ button {
   font-size: 20px;
 }
 
-.hinweiss{
+form {
+  block-size: auto;
+  display: inline-block;
+}
+
+.hinweiss {
   color: #961e1a;
   background-color: slategrey;
   border-color: sandybrown;
   border-width: 5px;
-  border-style:double;
+  border-style: double;
   text-align: left;
   padding: 2%;
 }
@@ -69,7 +75,6 @@ button {
   /*color: rgb(0, 0, 0);
   size: 3cm;*/
   /*filter: invert(100%);*/
-
 }
 
 /*
@@ -99,10 +104,12 @@ button {
   }
 }
 
-
 #calc-button {
   font-size: 20px;
   color: #f9f9f9;
+  background-color: #961e1a;
+  width: auto 20%;
+  font-size: 20px;
 }
 
 /*

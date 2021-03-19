@@ -4,13 +4,13 @@
 <!--Titel, Verlinkung von JS und CSS, sowie anpassungen für Moblie Endgeräte, mit kleinem Bildschirm-->
 
 <head>
-  <title>footage-calculator</title>
-  <meta charset="UTF-8" />
-  <script type="text/javascript" src="script.js"></script>
-  <link lang="de" rel="stylesheet" href="styles.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>footage-calculator</title>
+    <meta charset="UTF-8" />
+    <script type="text/javascript" src="script.js"></script>
+    <link lang="de" rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-  <!--  
+    <!--  
   ███████████████████████████████████████████████
   █┌┐█████████████┌───┐┌┐████████┌┐┌┐████████████
   █││█████████████│┌─┐├┘└┐███████│├┘└┐███████████
@@ -34,64 +34,70 @@
 
 <!--Kopfteile mit Inhaltsverzeichnis-->
 <header>
-  <h1>footage-calculator</h1>
+    <h1>footage-calculator</h1>
 </header>
+
 
 <!--Inhaltsbereich-->
 
-<body onload="checkdarkmodestate()">
-  <!--Navigatonsmenü-->
-  <nav>
+<body onload="che()"></body>ckdarkmodestate
+<!--Navigatonsmenü-->
+<nav>
     </div>
     <div class="navbar">
-      <a href="./index.html">Home</a>
-      <div class="dropdown">
-        <button class="dropbtn">Video
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="./Movie/mov-Storage.html">Speicherplatz</a>
-          <a href="./Movie/mov-Time.html">Zeit</a>
+        <a href="./index.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Video
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="./Movie/mov-Storage.html">Speicherplatz</a>
+                <a href="./Movie/mov-Time.html">Zeit</a>
+            </div>
         </div>
-      </div>
 
-      <div class="dropdown">
-        <button class="dropbtn">Bilder
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="./Images/pic-space.html">Speicherplatz</a>
+        <div class="dropdown">
+            <button class="dropbtn">Bilder
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="./Images/pic-space.html">Speicherplatz</a>
+            </div>
         </div>
-      </div>
     </div>
-  </nav>
+</nav>
 
-  <!--Intalt-->
-  <main>
-    
-    <h2>Hinweis</h2>
-    
-    <p>
-      Dieser footage-calculator dient dem groben ermitteln von Benötigtem Speicherplatz oder der Maximalen
-      Aufnahmedauer.
-    </p>
-    <br>
-    <p class="hinweiss">
-      Achtung!
-      Der footage-calculator berechnet nur unkomprimierte Formate korrekt.
-      Die Komprimierungsrate wird bei der Rechung nicht beachtet.
-    </p>
+<!--Intalt-->
+<main>
 
-  </main>
+    <div>
+        <form>
+            <select id="schnellauswahlformat" size="6" onchange="renderSelection()">
+                <option value="575">SD</option>
+                <option value="720">HD</option>
+                <option value="1080">Full HD</option>
+                <option value="4K">4K</option>
+                <option value="4K">4K</option>
+                <option value="5K">5K</option>
+                <option value="8K">8K</option>
+            </select>
+            <label id="selected"></label>
+        </form>
+    </div>
+
+
+
+</main>
 
 </body>
 
 <!--Fußzeile mit Dark Mode Button-->
 <footer>
-  <button onclick="goingtothedarkside()" id="darkmode">
-    <script type="text/javascript">
-      document.write(copyright);
-    </script>
-  </button>
+    <button onclick="goingtothedarkside()" id="darkmode">
+        <script type="text/javascript">
+            document.write(copyright);
+        </script>
+    </button>
 </footer>
+
 </html>

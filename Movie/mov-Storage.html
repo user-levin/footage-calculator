@@ -13,7 +13,7 @@
   <h1>footage-calculator</h1>
 </header>
 
-<body>
+<body onload="checkdarkmodestate()">
   <nav>
     </div>
     <div class="navbar">
@@ -42,6 +42,20 @@
   </nav>
 
   <main>
+    <div>
+      <form>
+        <select id="schnellauswahlformat" size="6" onchange="renderSelection()">
+          <option value="575" id="SD">SD</option>
+          <option value="720">HD</option>
+          <option value="1080">Full HD</option>
+          <option value="4K">4K</option>
+          <option value="5K">5K</option>
+          <option value="8K">8K</option>
+        </select>
+        <label id="selected"></label>
+      </form>
+    </div>
+
     <!--Eingabemenü für die Kalkulation -> Diese Infos werde vom JS verarbeitet-->
     <form id="speicherplatzrechner"></form>
     <table style="width:50">
@@ -92,7 +106,6 @@
         </td>
       </tr>
     </table>
-
   </main>
 
 </body>
