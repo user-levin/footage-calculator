@@ -12,8 +12,6 @@ function checkdarkmodestate() {
   }
 }
 
-
-
 const modename = "dark-mode";
 
 function setDarkMode() {
@@ -34,7 +32,6 @@ function setBrightMode() {
   localStorage.setItem("darkmode", false);
 }
 
-
 function goingtothedarkside() {
   const completesite = document.body;
   if (completesite.classList.contains(modename)) {
@@ -54,6 +51,7 @@ function calcspace() {
   let datadepthspace = parseInt(document.getElementById("datadepthspace").value);
   let timespace = parseInt(document.getElementById("timespace").value);
 
+  //let resultspace = calcspace2(widthspace, heightspace, framespace, datadepthspace, timespace);
   let resultspace = calcspace2(widthspace, heightspace, framespace, datadepthspace, timespace);
   //let resultspacegb = (resultspace / 1000);
 
@@ -62,10 +60,8 @@ function calcspace() {
 }
 
 function calcspace2(widthspace, heightspace, framespace, datadepthspace, timespace) {
-//function calcspace2(widthspace, heightspace, framespace, datadepthspace, timespace) {
   return (widthspace * heightspace * framespace * datadepthspace * timespace) / (8 * Math.pow(1024, 2));
 }
-
 
 
 /**
@@ -95,7 +91,7 @@ function calctime() {
   let resulttime = (8 * Math.pow(1024, 2) * spacetime) / (widthtime * heighttime * datadepthtime * frametime);
   let resulttimegb = (resulttime / 1000);
   document.getElementById("resulttime").textContent = Math.round(resulttime);
-  document.getElementById("resulttimegb").textContent;
+  //document.getElementById("resulttimegb").textContent = Math.round(resulttimegb);
 }
 
 //calculator time for Images
@@ -112,28 +108,13 @@ function calcpic() {
 }
 
 
-//var resultpic= parseInt(resultpic) + parseInt(mb);
-
+// function reagiert auf Änderung in der Auswahlliste und überschreibt bei neuer Auswahl. die Werte in Eingabefeldern
 function renderSelection() {
-
   let e = document.getElementById("schnellauswahlformat");
   let width = sizes[e.options[e.selectedIndex].value].w;
   let height = sizes[e.options[e.selectedIndex].value].h;
-  document.getElementById("selected").textContent = "Hoch: " + height + " | Breit: " + width;
-
-  // let widthspace = parseInt(document.getElementById("widthspace").value);
-  // let heightspace = parseInt(document.getElementById("heightspace").value);
-  // let framespace = parseInt(document.getElementById("framespace").value);
-  // let datadepthspace = parseInt(
-  //   document.getElementById("datadepthspace").value
-  // );
-  // let timespace = parseInt(document.getElementById("timespace").value);
-
-  // let resultspace = calcspace2(widthspace, heightspace, framespace, datadepthspace, timespace);
-  // let resultspacegb = (resultspace / 1000);
-
-  // document.getElementById("resultspace").textContent = Math.round(resultspace);
-  // document.getElementById("resultspacegb").textContent = Math.round(resultspacegb);
+  document.getElementById("widthspace").value = width;
+  document.getElementById("heightspace").value = height;
 }
 
 

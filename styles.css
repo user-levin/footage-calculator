@@ -36,13 +36,12 @@ main {
   justify-content: center;
   align-items: center;
   padding-bottom: 30%;
-  hyphens: auto; 
-	text-align: justify
+  hyphens: auto;
+  text-align: justify;
 }
 
 h1 {
   text-align: center;
-  padding-left: center;
   color: #961e1a;
   text-shadow: 0 0 0.2em #a3a3a3;
   padding: 2% 0% 2% 0%;
@@ -72,9 +71,9 @@ form {
 
 .darkmode {
   width: auto 50%;
-  /*color: rgb(0, 0, 0);
-  size: 3cm;*/
-  /*filter: invert(100%);*/
+  color: rgb(0, 0, 0);
+  size: 3cm;
+  filter: invert(100%);
 }
 
 /*
@@ -126,6 +125,9 @@ form {
   margin-bottom: 80px;
 }
 
+/**
+*https://www.w3schools.com/HOWTO/tryit.asp?filename=tryhow_css_dropdown_navbar
+*/
 /*navigationsmenü*/
 .navbar {
   overflow: hidden;
@@ -159,7 +161,7 @@ form {
 
 .navbar a:hover,
 .dropdown:hover .dropbtn {
-  background-color: red;
+  background-color: #961e1a;
   transition: 0.3s;
 }
 

@@ -5,10 +5,9 @@
 
 <head>
     <title>footage-calculator</title>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <script type="text/javascript" src="script.js"></script>
     <link lang="de" rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
     <!--  
   ███████████████████████████████████████████████
@@ -40,54 +39,44 @@
 
 <!--Inhaltsbereich-->
 
-<body onload="che()"></body>ckdarkmodestate
-<!--Navigatonsmenü-->
-<nav>
-    </div>
-    <div class="navbar">
-        <a href="./index.html">Home</a>
-        <div class="dropdown">
-            <button class="dropbtn">Video
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="./Movie/mov-Storage.html">Speicherplatz</a>
-                <a href="./Movie/mov-Time.html">Zeit</a>
+<body onload="checkdarkmodestate()">
+    <!--Navigatonsmenü-->
+    <nav>
+        <div class="navbar">
+            <a href="./index.html">Home</a>
+            <div class="dropdown"> 
+                <button class="dropbtn">Video
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="./Movie/mov-Storage.html">Speicherplatz</a>
+                    <a href="./Movie/mov-Time.html">Zeit</a>
+                </div>
             </div>
         </div>
+    </nav>
 
-        <div class="dropdown">
-            <button class="dropbtn">Bilder
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="./Images/pic-space.html">Speicherplatz</a>
-            </div>
+    <!--Intalt-->
+    <main>
+
+        <div>
+            <form>
+                <select id="schnellauswahlformat" size="6" onchange="renderSelection()">
+                    <option value="575">SD</option>
+                    <option value="720">HD</option>
+                    <option value="1080">Full HD</option>
+                    <option value="4K">4K</option>
+                    <option value="4K">4K</option>
+                    <option value="5K">5K</option>
+                    <option value="8K">8K</option>
+                </select>
+                <label id="selected"></label>
+            </form>
         </div>
-    </div>
-</nav>
-
-<!--Intalt-->
-<main>
-
-    <div>
-        <form>
-            <select id="schnellauswahlformat" size="6" onchange="renderSelection()">
-                <option value="575">SD</option>
-                <option value="720">HD</option>
-                <option value="1080">Full HD</option>
-                <option value="4K">4K</option>
-                <option value="4K">4K</option>
-                <option value="5K">5K</option>
-                <option value="8K">8K</option>
-            </select>
-            <label id="selected"></label>
-        </form>
-    </div>
 
 
 
-</main>
+    </main>
 
 </body>
 
@@ -100,4 +89,5 @@
     </button>
 </footer>
 
+</body>
 </html>
