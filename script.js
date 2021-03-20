@@ -1,10 +1,12 @@
-//Dark Mode
+//Dark Mode #easteregg
+
+
 function getBool(val) {
   return !!JSON.parse(String(val).toLowerCase());
 }
 
+//if Darkmode is on -> set "isdark"
 function checkdarkmodestate() {
-
   let isdark = getBool(localStorage.getItem("darkmode"));
 
   if (isdark) {
@@ -32,7 +34,7 @@ function setBrightMode() {
   localStorage.setItem("darkmode", false);
 }
 
-function goingtothedarkside() {
+function goingtothedarksideandgetafreecookie() {
   const completesite = document.body;
   if (completesite.classList.contains(modename)) {
     setBrightMode()
@@ -43,7 +45,9 @@ function goingtothedarkside() {
 
 
 
-//calc space for Movie
+
+
+//Calculating the storage space of video material
 function calcspace() {
   let widthspace = parseInt(document.getElementById("widthspace").value);
   let heightspace = parseInt(document.getElementById("heightspace").value);
@@ -51,17 +55,63 @@ function calcspace() {
   let datadepthspace = parseInt(document.getElementById("datadepthspace").value);
   let timespace = parseInt(document.getElementById("timespace").value);
 
-  //let resultspace = calcspace2(widthspace, heightspace, framespace, datadepthspace, timespace);
   let resultspace = calcspace2(widthspace, heightspace, framespace, datadepthspace, timespace);
-  //let resultspacegb = (resultspace / 1000);
 
   document.getElementById("resultspace").textContent = Math.round(resultspace);
-  //document.getElementById("resultspacegb").textContent = Math.round(resultspacegb);
 }
 
 function calcspace2(widthspace, heightspace, framespace, datadepthspace, timespace) {
   return (widthspace * heightspace * framespace * datadepthspace * timespace) / (8 * Math.pow(1024, 2));
 }
+
+
+/**
+ * https://stackoverflow.com/questions/25249961/value-of-select-elements-with-e-value-vs-e-optionse-selectedindex-value
+ */
+// function reagiert auf Änderung in der Auswahlliste und überschreibt bei neuer Auswahl. die Werte in Eingabefeldern
+function renderSelections() {
+  let e = document.getElementById("schnellauswahlformatstorage");
+  let width = sizes[e.options[e.selectedIndex].value].w;
+  let height = sizes[e.options[e.selectedIndex].value].h;
+  document.getElementById("widthspace").value = width;
+  document.getElementById("heightspace").value = height;
+}
+
+
+
+
+//Calculation of the movie time in in seconds
+function calctime() {
+  let widthtime = parseInt(document.getElementById("widthtime").value);
+  let heighttime = parseInt(document.getElementById("heighttime").value);
+  let frametime = parseInt(document.getElementById("frametime").value);
+  let datadepthtime = parseInt(document.getElementById("datadepthtime").value);
+  let spacetime = parseInt(document.getElementById("spacetime").value);
+
+  let resulttime = calctime2(spacetime, widthtime, heighttime, datadepthtime, frametime);
+
+  document.getElementById("resulttime").textContent = Math.round(resulttime);
+
+  let resultspace = calctime2(widthtime, heighttime, frametime, datadepthtime, timetime);
+
+  document.getElementById("resulttime").textContent = Math.round(resultspace);
+}
+
+function resulttime2(widthtime, heighttime, frametime, datadepthtime, spacetime) {
+  return (8 * Math.pow(1024, 2) * spacetime) / (widthtime * heighttime * datadepthtime * frametime);
+}
+
+
+// function reagiert auf Änderung in der Auswahlliste und überschreibt bei neuer Auswahl. die Werte in Eingabefeldern
+function renderSelectiont() {
+  let e = document.getElementById("schnellauswahlformattime");
+  let width = sizes[e.options[e.selectedIndex].value].w;
+  let height = sizes[e.options[e.selectedIndex].value].h;
+  document.getElementById("widthtime").value = width;
+  document.getElementById("heighttime").value = height;
+}
+
+
 
 
 /**
@@ -80,19 +130,7 @@ const sizes =
 }
 
 
-//calc time for Movie
-function calctime() {
-  let widthtime = parseInt(document.getElementById("widthtime").value);
-  let heighttime = parseInt(document.getElementById("heighttime").value);
-  let frametime = parseInt(document.getElementById("frametime").value);
-  let datadepthtime = parseInt(document.getElementById("datadepthtime").value);
-  let spacetime = parseInt(document.getElementById("spacetime").value);
 
-  let resulttime = (8 * Math.pow(1024, 2) * spacetime) / (widthtime * heighttime * datadepthtime * frametime);
-  let resulttimegb = (resulttime / 1000);
-  document.getElementById("resulttime").textContent = Math.round(resulttime);
-  //document.getElementById("resulttimegb").textContent = Math.round(resulttimegb);
-}
 
 //calculator time for Images
 function calcpic() {
@@ -108,14 +146,6 @@ function calcpic() {
 }
 
 
-// function reagiert auf Änderung in der Auswahlliste und überschreibt bei neuer Auswahl. die Werte in Eingabefeldern
-function renderSelection() {
-  let e = document.getElementById("schnellauswahlformat");
-  let width = sizes[e.options[e.selectedIndex].value].w;
-  let height = sizes[e.options[e.selectedIndex].value].h;
-  document.getElementById("widthspace").value = width;
-  document.getElementById("heightspace").value = height;
-}
 
 
 //for si units

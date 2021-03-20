@@ -25,6 +25,11 @@ body {
   border-color: black;
 }
 
+#schnellauswahlformat {
+text-align: left;
+width: 60%;
+}
+
 header {
   size: 40%;
   background-color: gold;
@@ -73,7 +78,7 @@ form {
   width: auto 50%;
   color: rgb(0, 0, 0);
   size: 3cm;
-  filter: invert(100%);
+  /*filter: invert(100%);*/
 }
 
 /*

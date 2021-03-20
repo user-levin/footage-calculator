@@ -42,6 +42,27 @@
 
 
   <main>
+
+    <p></p>
+    <p>Bitte fülle alle Werte in der korrekten Einheit aus!</p>
+
+    <!--
+    - https://stackoverflow.com/questions/25249961/value-of-select-elements-with-e-value-vs-e-optionse-selectedindex-value
+    -->
+
+    <!--Selection menu for video formats-->
+    <select id="schnellauswahlformattime" size="6" onchange="renderSelectiont()">
+      <option value="575">SD</option>
+      <option value="720">HD</option>
+      <option value="1080">Full HD</option>
+      <option value="4K">4K</option>
+      <option value="5K">5K</option>
+      <option value="8K">8K</option>
+    </select>
+    <label id="selected"></label>
+
+
+    <!--Table for input of values with labelling-->
     <form id="speicherplatzrechner"></form>
     <table style="width:50">
       <tr>
@@ -78,14 +99,12 @@
       </tr>
       <tr>
         <td>
-          <p id="resulttime"></p>
+          <!--Output of the result from the JS calculation-->
+          <p><output id="resulttime"></output> s</p>
           </br>
-          <p id="resulttimegb"></p>
         </td>
       </tr>
     </table>
-
-
   </main>
 
 </body>
@@ -98,6 +117,13 @@
     </script>
   </button>
 </footer>
-
-
 </html>
+
+
+
+
+<button onclick="goingtothedarksideandgetafreecookie()" id="darkmode">
+  <script type="text/javascript">
+    document.write(copyright);
+  </script>
+</button>
