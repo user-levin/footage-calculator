@@ -88,8 +88,8 @@ function calctime() {
 
   let resulttime = (8 * Math.pow(1024, 2) * spacetime) / (widthtime * heighttime * datadepthtime * frametime);
   let resulttimegb = (resulttime / 3600);
-  
-  
+
+
   document.getElementById("resulttime").textContent = Math.round(resulttime);
   document.getElementById("resulttimegb").textContent = Math.round(resulttimegb);
 }
@@ -140,7 +140,10 @@ function calcpic() {
  * https://www.rapidtables.com/web/html/html-codes/html-code-copyright.html
  */
 //generates a copyright text with my name and the current date
+
+function copyright() {
 var today = new Date();
 var year = today.getFullYear();
 var copyright = "&copy;" + " Levin Staudte" + " " + year;
 document.getElementById("copyright").textContent = copyright;
+}
