@@ -3,6 +3,11 @@ function getBool(val) {
   return !!JSON.parse(String(val).toLowerCase());
 }
 
+function doOnLoad() {
+  checkdarkmodestate();
+  copyright()
+}
+
 //if Darkmode is on -> set "isdark"
 function checkdarkmodestate() {
   let isdark = getBool(localStorage.getItem("darkmode"));
@@ -55,14 +60,19 @@ function calcspace() {
   let datadepthspace = parseInt(document.getElementById("datadepthspace").value);
   let timespace = parseInt(document.getElementById("timespace").value);
 
-  let resultspace = calcspace2(widthspace, heightspace, framespace, datadepthspace, timespace);
+  //let resultspace = calcspace2(widthspace, heightspace, framespace, datadepthspace, timespace);
+  let resultspace = (widthspace * heightspace * framespace * datadepthspace * timespace) / (8 * Math.pow(1024, 2));
+  let resultspacegb = (resultspace / 1000);
 
   document.getElementById("resultspace").textContent = Math.round(resultspace);
+  document.getElementById("resultspacegb").textContent = Math.round(resultspacegb);
 }
-
+/*
 function calcspace2(widthspace, heightspace, framespace, datadepthspace, timespace) {
   return (widthspace * heightspace * framespace * datadepthspace * timespace) / (8 * Math.pow(1024, 2));
 }
+*/
+
 
 
 /**
@@ -87,11 +97,11 @@ function calctime() {
   let spacetime = parseInt(document.getElementById("spacetime").value);
 
   let resulttime = (8 * Math.pow(1024, 2) * spacetime) / (widthtime * heighttime * datadepthtime * frametime);
-  let resulttimegb = (resulttime / 3600);
+  let resulttimeh = (resulttime / 3600);
 
 
   document.getElementById("resulttime").textContent = Math.round(resulttime);
-  document.getElementById("resulttimegb").textContent = Math.round(resulttimegb);
+  document.getElementById("resulttimeh").textContent = Math.round(resulttimeh);
 }
 
 
@@ -142,8 +152,8 @@ function calcpic() {
 //generates a copyright text with my name and the current date
 
 function copyright() {
-var today = new Date();
-var year = today.getFullYear();
-var copyright = "&copy;" + " Levin Staudte" + " " + year;
-document.getElementById("copyright").textContent = copyright;
+  var today = new Date();
+  var year = today.getFullYear();
+  var copyright = " Levin Staudte" + " " + year;
+  document.getElementById("copyright").textContent = copyright;
 }

@@ -5,11 +5,9 @@
 
 <head>
   <title>footage-calculator</title>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
   <script type="text/javascript" src="script.js"></script>
   <link lang="de" rel="stylesheet" href="styles.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-
   <!--  
   ███████████████████████████████████████████████
   █┌┐█████████████┌───┐┌┐████████┌┐┌┐████████████
@@ -39,7 +37,7 @@
 
 <!--Inhaltsbereich-->
 
-<body onload="checkdarkmodestate()">
+<body onload="doOnLoad()">
   <!--Navigatonsmenü-->
   <nav>
     </div>
@@ -82,13 +80,12 @@
       Die Komprimierungsrate wird bei der Rechung nicht beachtet.
     </p>
   </main>
-
 </body>
 
 <!--Fußzeile mit Dark Mode Button-->
 <footer>
   <button onclick="goingtothedarksideandgetafreecookie()" id="darkmode">
-    <p id="copyright"></p>
+    <p id="copyrightbutton"> &copy; <span id="copyright"></span></p>
   </button>
 </footer>
 </html>
