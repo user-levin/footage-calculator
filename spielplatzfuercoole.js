@@ -16,6 +16,3 @@ function calcspace() {
   function calcspace2(widthspace, heightspace, framespace, datadepthspace, timespace) {
     return (widthspace * heightspace * framespace * datadepthspace * timespace) / (8 * Math.pow(1024, 2));
   }
-  
-
-  

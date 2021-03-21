@@ -95,12 +95,13 @@
         </td>
       </tr>
       <tr>
-        <td><button id="calc-buttontime" onclick="calctime()">Berechnen</button></td>
+        <td><button id="calc-button" onclick="calctime()">Berechnen</button></td>
       </tr>
       <tr>
         <td>
           <!--Output of the result from the JS calculation-->
           <p><output id="resulttime"></output> s</p>
+          <p><output id="resulttimegb"></output> h</p>
           </br>
         </td>
       </tr>
@@ -111,19 +112,11 @@
 
 <!--Fußzeile mit Dark Mode Button-->
 <footer>
-  <button onclick="goingtothedarkside()" id="darkmode">
+  <button onclick="goingtothedarksideandgetafreecookie()" id="darkmode">
     <script type="text/javascript">
       document.write(copyright);
     </script>
   </button>
 </footer>
+
 </html>
-
-
-
-
-<button onclick="goingtothedarksideandgetafreecookie()" id="darkmode">
-  <script type="text/javascript">
-    document.write(copyright);
-  </script>
-</button>

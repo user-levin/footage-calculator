@@ -1,6 +1,4 @@
 //Dark Mode #easteregg
-
-
 function getBool(val) {
   return !!JSON.parse(String(val).toLowerCase());
 }
@@ -44,9 +42,11 @@ function goingtothedarksideandgetafreecookie() {
 }
 
 
-
-
-
+/**
+ * https://www.youtube.com/watch?v=OGe8OlfibQI
+ * https://stackoverflow.com/questions/13693580/how-to-make-a-document-getelementbyid-value-into-an-integer-variable-not-a-stri
+ * 
+ */
 //Calculating the storage space of video material
 function calcspace() {
   let widthspace = parseInt(document.getElementById("widthspace").value);
@@ -78,8 +78,6 @@ function renderSelections() {
 }
 
 
-
-
 //Calculation of the movie time in in seconds
 function calctime() {
   let widthtime = parseInt(document.getElementById("widthtime").value);
@@ -88,17 +86,12 @@ function calctime() {
   let datadepthtime = parseInt(document.getElementById("datadepthtime").value);
   let spacetime = parseInt(document.getElementById("spacetime").value);
 
-  let resulttime = calctime2(spacetime, widthtime, heighttime, datadepthtime, frametime);
-
+  let resulttime = (8 * Math.pow(1024, 2) * spacetime) / (widthtime * heighttime * datadepthtime * frametime);
+  let resulttimegb = (resulttime / 3600);
+  
+  
   document.getElementById("resulttime").textContent = Math.round(resulttime);
-
-  let resultspace = calctime2(widthtime, heighttime, frametime, datadepthtime, timetime);
-
-  document.getElementById("resulttime").textContent = Math.round(resultspace);
-}
-
-function resulttime2(widthtime, heighttime, frametime, datadepthtime, spacetime) {
-  return (8 * Math.pow(1024, 2) * spacetime) / (widthtime * heighttime * datadepthtime * frametime);
+  document.getElementById("resulttimegb").textContent = Math.round(resulttimegb);
 }
 
 
@@ -117,7 +110,7 @@ function renderSelectiont() {
 /**
  *https://www.w3schools.com/js/js_const.asp
  */
-//
+// das kommt tendenziell aus einer Datenbank
 const sizes =
 {
   "575": { "h": 1024, "w": 576 },
@@ -129,9 +122,6 @@ const sizes =
   "8K": { "h": 7690, "w": 4320 }
 }
 
-
-
-
 //calculator time for Images
 function calcpic() {
   let widthtpic = parseInt(document.getElementById("widthtpic").value);
@@ -139,23 +129,18 @@ function calcpic() {
   let datadepthpic = parseInt(document.getElementById("datadepthpic").value);
 
   let resultpic = (widthtpic * heightpic * datadepthpic) / (8 * Math.pow(1024, 2));
-  let resultpicbg = (resultpic / 1000);
 
   document.getElementById("resultpic").textContent = Math.round(resultpic);
-  document.getElementById("resultpic").textContent = Math.round(resultpicbg);
 }
 
 
 
-
-//for si units
-var gb = "in gb";
-var mb = "in mb";
-
-
-
-
-//for copyright
+/**
+ * https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Date/getFullYear
+ * https://www.rapidtables.com/web/html/html-codes/html-code-copyright.html
+ */
+//generates a copyright text with my name and the current date
 var today = new Date();
 var year = today.getFullYear();
 var copyright = "&copy;" + " Levin Staudte" + " " + year;
+document.getElementById("copyright").textContent = copyright;
