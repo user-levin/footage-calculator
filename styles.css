@@ -11,6 +11,38 @@ body {
   border-color: black;
 }
 
+header {
+  size: 40%;
+  background-color: rgb(143, 178, 255);
+  padding: 0%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+h1 {
+  text-align: center;
+  color: #961e1a;
+  text-shadow: 0 0 0.2em #a3a3a3;
+  padding: 2% 0% 2% 0%;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  font-size: 3em;
+}
+
+main {
+  padding-top: 5%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10%;
+  hyphens: auto;
+  text-align: justify;
+  background-color: rgba(255, 187, 0, 0.63);
+}
+
+footer {
+  background-color: rgba(255, 187, 0, 0.63);
+}
 
 .dark-mode {
   background-color: rgb(36, 36, 36);
@@ -29,39 +61,6 @@ body {
   text-align: left;
   width: 60%;
 }
-
-header {
-  size: 40%;
-  background-color: rgb(143, 178, 255);
-  padding: 0%;
-  padding-top: 3%;
-  padding-bottom: 3%;
-}
-
-h1 {
-  text-align: center;
-  color: #961e1a;
-  text-shadow: 0 0 0.2em #a3a3a3;
-  padding: 2% 0% 2% 0%;
-  margin-block-start: 0em;
-  margin-block-end: 0em;
-}
-
-main {
-  padding-top: 5%;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 10%;
-  hyphens: auto;
-  text-align: justify;
-  background-color: rgba(255, 187, 0, 0.63);
-}
-
-footer {
-  background-color: rgba(255, 187, 0, 0.63);
-}
-
 
 /*
 button {
@@ -87,13 +86,11 @@ form {
   padding: 2%;
 }
 
-
 #darkmode {
   width: auto;
   color: rgb(0, 0, 0);
-  size: inherit ;
+  size: inherit;
 }
-
 
 /**
 *https://www.w3schools.com/css/css3_mediaqueries_ex.asp
@@ -139,10 +136,6 @@ form {
   }
 }
 
-h1 {
-  font-size: 3em;
-}
-
 #calc-button {
   font-size: 20px;
   color: #f9f9f9;
@@ -152,11 +145,10 @@ h1 {
 }
 
 #copyrightbutton {
-  color:black;
-  width: auto ;
-  font-weight:bolder;
+  color: black;
+  width: auto;
+  font-weight: bolder;
 }
-
 
 #speicherplatzrechner {
   margin-bottom: 3%;

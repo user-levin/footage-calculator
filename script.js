@@ -123,7 +123,7 @@ function renderSelectiont() {
 // das kommt tendenziell aus einer Datenbank
 const sizes =
 {
-  "575": { "h": 1024, "w": 576 },
+  "575": { "h": 858, "w": 480 },
   "720": { "h": 720, "w": 1280 },
   "1080": { "h": 1080, "w": 1920 },
   "4K": { "h": 3840, "w": 2160 },
