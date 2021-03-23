@@ -74,7 +74,6 @@ function calcspace2(widthspace, heightspace, framespace, datadepthspace, timespa
 */
 
 
-
 /**
  * https://stackoverflow.com/questions/25249961/value-of-select-elements-with-e-value-vs-e-optionse-selectedindex-value
  */
