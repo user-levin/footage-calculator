@@ -42,6 +42,7 @@
   </nav>
 
   <main>
+    <p>Bitte wähle eine Videoauflösung aus!</p>
     <!--
     - https://stackoverflow.com/questions/25249961/value-of-select-elements-with-e-value-vs-e-optionse-selectedindex-value
     -->
@@ -55,6 +56,9 @@
       <option value="8K">8K</option>
     </select>
     <label id="selected"></label>
+    
+    <p>Bitte fülle alle Werte in der korrekten Einheit aus!</p>
+
     <!--Eingabemenü für die Kalkulation -> Diese Infos werde vom JS verarbeitet-->
     <form id="speicherplatzrechner"></form>
     <table style="width:50">
@@ -79,7 +83,7 @@
       </tr>
 
       <tr>
-        <td>Datentiefe</td>
+        <td>Farbtiefe</td>
         <td>
           <input id="datadepthspace" type="number" name="Datentiefe" placeholder="in bit" min="0" />
         </td>

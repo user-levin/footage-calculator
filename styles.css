@@ -9,8 +9,9 @@ body {
   border: medium;
   border-style: solid;
   border-color: black;
-  /*padding-top: 1%;*/
+  margin left: 20%;
 }
+
 
 .dark-mode {
   background-color: rgb(36, 36, 36);
@@ -20,9 +21,10 @@ body {
   color: white;
   max-width: 1024px;
   margin: 0 auto;
-  border: width 20px;
+  border: medium;
   border-style: solid;
   border-color: black;
+  margin left: 20%;
 }
 
 #schnellauswahlformat {
@@ -52,10 +54,16 @@ main {
   display: grid;
   justify-content: center;
   align-items: center;
-  padding-bottom: 30%;
+  padding-bottom: 10%;
   hyphens: auto;
   text-align: justify;
+  background-color: rgba(255, 187, 0, 0.63);
 }
+
+footer {
+  background-color: rgba(255, 187, 0, 0.63);
+}
+
 
 /*
 button {
@@ -81,19 +89,17 @@ form {
   padding: 2%;
 }
 
-.darkmode {
-  width: auto 50%;
+
+#darkmode {
+  width: auto;
   color: rgb(0, 0, 0);
-  size: 3cm;
-  /*filter: invert(100%);*/
+  size: inherit ;
 }
 
-/*
-:root {
-  filter: invert(100%) hue-rotate(180deg);
-}
+
+/**
+*https://www.w3schools.com/css/css3_mediaqueries_ex.asp
 */
-
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .topnav a {
@@ -104,15 +110,39 @@ form {
     border-style: solid;
     font-size: 1em;
   }
+
   body {
     font-size: 1em;
     border-style: none;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-  footer {
-    position: absolute;
-    bottom: 2%;
+
+  main {
     padding-left: 5%;
+    padding-right: 5%;
   }
+
+  footer {
+    /*position: absolute;
+    bottom: 2%;*/
+    padding-left: 5%;
+    margin-bottom: 0%;
+  }
+
+  .hinweiss {
+    margin-bottom: 55%;
+  }
+  h1 {
+    font-size: 2em;
+  }
+}
+
+h1 {
+  font-size: 3em;
 }
 
 #calc-button {
@@ -124,12 +154,14 @@ form {
 }
 
 #copyrightbutton {
-  color:salmon;
+  color:black;
+  width: auto ;
+  font-weight:bolder;
 }
 
+
 #speicherplatzrechner {
-  margin-top: 20px;
-  margin-bottom: 80px;
+  margin-bottom: 3%;
 }
 
 /**
